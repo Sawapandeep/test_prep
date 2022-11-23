@@ -408,5 +408,101 @@ class GFG {
 		else
 			System.out.println("Element found at index "
 							+ result);
-	}}`
+	}}`,formbiggestnumber:``package coll.java.algo;
+import java.util.Scanner;
+public class FormBiggestNumber {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner scn = new Scanner(System.in);
+		int n = scn.nextInt();
+		String arr[] = new String[n];
+		
+		for(int i = 0; i<arr.length ; i++)
+		{
+			arr[i] = scn.nextInt()+"";
+		}
+		
+		for(int i = 0; i<arr.length;i++ ) {
+			for(int j = 0; j<arr.length-1;j++) {
+				int ans = compare(arr[j],arr[j+1]);
+				
+				if(ans<0)
+				{
+					String temp = arr[j];
+					arr[j] = arr[j+1];
+					arr[j+1] = temp;
+				}
+			}
+		}	
+		for(String val:arr) {
+			System.out.print(val );
+		}
+	}
+	
+	public static int compare(String s1, String s2)
+	{
+		String Str1 = s1+s2;
+		String Str2 = s2+s1;
+		int a = Integer.parseInt(Str1);
+		int b = Integer.parseInt(Str2);
+		
+		if(a - b > 0)
+		{
+			return 1;
+		}
+		return -1;
+	}
+
+}, HalfAscendingHalfDescendin:`
+
+import java.util.*;
+ 
+
+class GFG
+{
+// function to print half of the array in 
+// ascending order and the other half in 
+// descending order
+
+static void printOrder(int[] arr, int n)
+{
+
+    // sorting the array
+
+    Arrays.sort(arr);
+ 
+
+    // printing first half in ascending 
+
+    // order
+
+    for (int i = 0; i < n / 2; i++) 
+
+        System.out.print(arr[i]+" ");
+ 
+
+    // printing second half in descending 
+
+    // order
+
+    for (int j = n - 1; j >= n / 2; j--)
+
+    System.out.print(arr[j]+" ");
+
+     
+}
+ 
+// Driver code
+
+public static void main(String[] args)
+{
+
+    int[] arr = { 5, 4, 6, 2, 1, 3, 8, 9, 7 };
+
+    int n = arr.length;
+
+    printOrder(arr, n);
+ 
+}
+}`
 };
