@@ -408,7 +408,7 @@ class GFG {
 		else
 			System.out.println("Element found at index "
 							+ result);
-	}}`,formbiggestnumber:``package coll.java.algo;
+	}}`,formbiggestnumber:`package coll.java.algo;
 import java.util.Scanner;
 public class FormBiggestNumber {
 	public static void main(String[] args) {
@@ -453,7 +453,7 @@ public class FormBiggestNumber {
 		return -1;
 	}
 
-}, HalfAscendingHalfDescendin:`
+}`, HalfAscendingHalfDescendin:`
 
 import java.util.*;
  
